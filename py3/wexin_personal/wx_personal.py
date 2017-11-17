@@ -3,6 +3,7 @@ import itchat, time
 import datetime as dt
 from apscheduler.schedulers.background import BackgroundScheduler
 import random
+from wxpy import *
 
 # @itchat.msg_register(itchat.content.TEXT)
 # def print_content(msg):
