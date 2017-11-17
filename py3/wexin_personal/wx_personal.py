@@ -11,7 +11,7 @@ from wxpy import *
 #     print(msg)
 
 # 一些备选问候语
-robot = Robot(console_qr=True)
+
 greetList = ['快去睡觉别熬夜','好好找工作加油','注意身体多喝热水','想你了求自拍']
 def tick():
     users = itchat.search_friends(name=u'xxx') # 找到你女朋友的名称
@@ -33,6 +33,7 @@ def my_scheduler(runTime):
 if __name__ == '__main__':
     # itchat.auto_login(enableCmdQR=True) # 在命令行中展示二维码，默认展示的是图片二维码
     itchat.auto_login(hotReload=True) # 这个是方便调试用的，不用每一次跑程序都扫码
+    itchat.auto_login(console_qr=True)
     now = dt.datetime.now() # 获取当前时间
     nextTickTime = now + dt.timedelta(days=1) #下一个问候时间为明天的现在
     nextTickTime = nextTickTime.strftime("%Y-%m-%d 00:00:00") # 把下一个问候时间设定为明天的零点
