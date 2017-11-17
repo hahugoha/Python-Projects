@@ -10,6 +10,7 @@ import random
 #     print(msg)
 
 # 一些备选问候语
+robot = Robot(console_qr=True)
 greetList = ['快去睡觉别熬夜','好好找工作加油','注意身体多喝热水','想你了求自拍']
 def tick():
     users = itchat.search_friends(name=u'xxx') # 找到你女朋友的名称
